@@ -1,7 +1,8 @@
 [package]
 name = "windows-clipboard"
-version = "1.0.0"
+version = "1.0.2"
 authors = ["Sindre Sorhus <sindresorhus@gmail.com>", "Vsevolod Strukchinsky <floatdrop@gmail.com>"]
 
 [dependencies]
-clipboard-win = "2.0.1"
+clipboard-win = "4"
+image = "0.23.12"
