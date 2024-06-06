@@ -6,3 +6,12 @@ authors = ["Sindre Sorhus <sindresorhus@gmail.com>", "Vsevolod Strukchinsky <flo
 [dependencies]
 clipboard-win = "4"
 image = "0.23.12"
+
+### https://stackoverflow.com/questions/29008127/why-are-rust-executables-so-huge
+### https://github.com/johnthagen/min-sized-rust
+[profile.release]
+opt-level = 'z'     # Optimize for size
+lto = true          # Enable link-time optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations
+panic = 'abort'     # Abort on panic
+strip = true        # Strip symbols from binary*
